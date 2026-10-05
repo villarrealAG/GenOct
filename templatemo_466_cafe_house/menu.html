@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menú — Cafe House</title>
+  <meta name="description" content="Menú de Cafe House: cafés calientes y fríos, tés y postres hechos en casa.">
+  <meta name="theme-color" content="#f5f5f7">
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/templatemo-style.css" rel="stylesheet">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Fondo animado -->
+  <div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <!-- Preloader -->
+  <div id="loader-wrapper"><div id="loader"></div></div>
+
+  <!-- Encabezado -->
+  <header class="site-header">
+    <div class="nav-shell glass">
+      <a href="index.html" class="brand">
+        <span class="brand-icon"><i class="fa fa-coffee"></i></span>
+        <span>Cafe House</span>
+      </a>
+      <nav class="tm-nav" aria-label="Principal">
+        <span class="nav-indicator" aria-hidden="true"></span>
+        <a href="index.html">Inicio</a>
+        <a href="today-special.html">Especial de hoy</a>
+        <a href="menu.html" class="active">Menú</a>
+        <a href="contact.html">Contacto</a>
+      </nav>
+      <button class="mobile-menu-icon" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero hero--compact">
+      <div class="container">
+        <span class="pill-tag glass reveal">📋 Carta completa</span>
+        <h1 class="hero-title reveal" style="--d:.08s">Nuestro <span class="grad-text">menú</span></h1>
+        <p class="hero-lead reveal" style="--d:.16s">Bebidas calientes y frías, tés y postres hechos en casa. Todo se prepara al momento con ingredientes frescos.</p>
+        <div class="hero-actions reveal" style="--d:.24s">
+          <a href="#main" class="btn btn-dark">Explorar <i class="fa fa-arrow-right"></i></a>
+          <a href="today-special.html" class="btn btn-glass glass">Especial de hoy</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menú -->
+    <section class="section" id="main">
+      <div class="container">
+        <div class="menu-layout">
+          <div class="menu-cats glass reveal" role="group" aria-label="Categorías">
+            <button type="button" class="cat-btn active" data-filter="all" aria-pressed="true">Todo <span class="cat-count">12</span></button>
+            <button type="button" class="cat-btn" data-filter="caliente" aria-pressed="false">Café caliente <span class="cat-count">5</span></button>
+            <button type="button" class="cat-btn" data-filter="frio" aria-pressed="false">Café frío <span class="cat-count">3</span></button>
+            <button type="button" class="cat-btn" data-filter="te" aria-pressed="false">Tés <span class="cat-count">2</span></button>
+            <button type="button" class="cat-btn" data-filter="postre" aria-pressed="false">Postres <span class="cat-count">2</span></button>
+          </div>
+
+          <div class="menu-list">
+            <article class="menu-item glass glass-interactive reveal" data-cat="caliente">
+              <div class="app-icon i-coffee" aria-hidden="true">☕</div>
+              <div class="menu-item-text">
+                <h3>Espresso</h3>
+                <p>Shot intenso de 30 ml con crema dorada y notas de chocolate amargo.</p>
+              </div>
+              <span class="price-pill">$35</span>
+            </article>
+            <article class="menu-item glass glass-interactive reveal" data-cat="caliente" style="--d:.05s">
+              <div class="app-icon i-coffee" aria-hidden="true">☕</div>
+              <div class="menu-item-text">
+                <h3>Americano</h3>
+                <p>Espresso doble alargado con agua caliente. Suave y limpio.</p>
+              </div>
+              <span class="price-pill">$40</span>
+            </article>
+            <article class="menu-item glass glass-interactive reveal" data-cat="caliente" style="--d:.1s">
+              <div class="app-icon i-milk" aria-hidden="true">🥛</div>
+              <div class="menu-item-text">
+                <h3>Capuchino</h3>
+                <p>Partes iguales de espresso, leche vaporizada y espuma sedosa.</p>
+              </div>
+              <span class="price-pill">$55</span>
+            </article>
+            <article class="menu-item glass glass-interactive reveal" data-cat="caliente">
+              <div class="app-icon i-milk" aria-hidden="true">🥛</div>
+              <div class="menu-item-text">
+                <h3>Latte</h3>
+                <p>Espresso con abundante leche texturizada. Pídelo con vainilla o caramelo.</p>
+              </div>
+              <span class="price-pill">$55</span>
+            </article>
+            <article class="menu-item glass glass-interactive reveal" data-cat="caliente" style="--d:.05s">
+              <div class="app-icon i-choco" aria-hidden="true">🍫</div>
+              <div class="menu-item-text">
+                <h3>Moca</h3>
+                <p>Espresso, chocolate oscuro y leche cremosa, con cacao espolvoreado.</p>
+              </div>
+              <span class="price-pill">$60</span>
+            </article>
+            <article class="menu-item glass glass-interactive reveal" data-cat="frio" style="--d:.1s">
+              <div class="app-icon i-ice" aria-hidden="true">🧊</div>
+              <div class="menu-item-text">
+                <h3>Cold brew</h3>
+                <p>Infusionado en frío durante 18 horas. Refrescante y naturalmente dulce.</p>
+              </div>
+              <span class="price-pill">$60</span>
+            </article>
+            <article class="menu-item glass glass-interactive reveal" data-cat="frio">
+              <div class="app-icon i-ice" aria-hidden="true">🥤</div>
+              <div class="menu-item-text">
+                <h3>Frappé de caramelo</h3>
+                <p>Café, hielo y caramelo salado batidos, con crema batida encima.</p>
+              </div>
+              <span class="price-pill">$70</span>
+            </article>
+            <article class="menu-item glass glass-interactive reveal" data-cat="frio" style="--d:.05s">
+              <div class="app-icon i-berry" aria-hidden="true">🍨</div>
+              <div class="menu-item-text">
+                <h3>Affogato</h3>
+                <p>Una bola de helado de vainilla bañada en espresso caliente.</p>
+              </div>
+              <span class="price-pill">$65</span>
+            </article>
+            <article class="menu-item glass glass-interactive reveal" data-cat="te" style="--d:.1s">
+              <div class="app-icon i-tea" aria-hidden="true">🍵</div>
+              <div class="menu-item-text">
+                <h3>Matcha latte</h3>
+                <p>Matcha ceremonial japonés batido a mano con leche vaporizada.</p>
+              </div>
+              <span class="price-pill">$65</span>
+            </article>
+            <article class="menu-item glass glass-interactive reveal" data-cat="te">
+              <div class="app-icon i-pastry" aria-hidden="true">🫖</div>
+              <div class="menu-item-text">
+                <h3>Chai latte</h3>
+                <p>Té negro con canela, cardamomo y jengibre, con leche espumada.</p>
+              </div>
+              <span class="price-pill">$55</span>
+            </article>
+            <article class="menu-item glass glass-interactive reveal" data-cat="postre" style="--d:.05s">
+              <div class="app-icon i-pastry" aria-hidden="true">🥐</div>
+              <div class="menu-item-text">
+                <h3>Croissant</h3>
+                <p>Hojaldre de mantequilla horneado cada mañana. Crujiente y ligero.</p>
+              </div>
+              <span class="price-pill">$45</span>
+            </article>
+            <article class="menu-item glass glass-interactive reveal" data-cat="postre" style="--d:.1s">
+              <div class="app-icon i-berry" aria-hidden="true">🍰</div>
+              <div class="menu-item-text">
+                <h3>Pastel de chocolate</h3>
+                <p>Tres capas de chocolate belga con ganache. Ideal para acompañar tu café.</p>
+              </div>
+              <span class="price-pill">$70</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-panel glass reveal">
+        <div>
+          <a href="index.html" class="brand">
+            <span class="brand-icon"><i class="fa fa-coffee"></i></span>
+            <span>Cafe House</span>
+          </a>
+          <p>Café de especialidad, pan artesanal y un espacio para quedarte. Te esperamos en la colonia Roma.</p>
+          <div class="social">
+            <a href="#" class="tm-social-icon" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="tm-social-icon" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="tm-social-icon" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="tm-social-icon" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a>
+          </div>
+        </div>
+        <nav aria-label="Pie de página">
+          <h3 class="footer-title">Explora</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="today-special.html">Especial de hoy</a></li>
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="footer-title">Horario</h3>
+          <div class="hours">
+            <div>Lunes a viernes · 7:00 – 21:00</div>
+            <div>Sábado y domingo · 8:00 – 22:00</div>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Cafe House. Hecho con ☕ en CDMX.</p>
+    </div>
+  </footer>
+
+  <script src="js/templatemo-script.js"></script>
+</body>
+</html>
