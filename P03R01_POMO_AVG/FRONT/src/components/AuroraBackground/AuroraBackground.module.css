@@ -1,0 +1,69 @@
+.aurora {
+  position: fixed;
+  inset: -20%;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(80px) saturate(140%);
+  opacity: 0.55;
+}
+
+.blob {
+  position: absolute;
+  display: block;
+  width: 46vmax;
+  height: 46vmax;
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.blobA {
+  top: 2%;
+  left: 4%;
+  background: radial-gradient(circle at 30% 30%, var(--accent), transparent 68%);
+  animation: driftA 26s var(--ease) infinite alternate;
+}
+
+.blobB {
+  right: 0;
+  bottom: 4%;
+  background: radial-gradient(circle at 60% 40%, var(--accent-2), transparent 66%);
+  animation: driftB 32s var(--ease) infinite alternate;
+}
+
+.blobC {
+  top: 34%;
+  left: 40%;
+  width: 34vmax;
+  height: 34vmax;
+  opacity: 0.6;
+  background: radial-gradient(circle at 50% 50%, var(--accent), transparent 70%);
+  animation: driftC 38s var(--ease) infinite alternate;
+}
+
+@keyframes driftA {
+  to {
+    transform: translate3d(14vmax, 10vmax, 0) scale(1.18);
+  }
+}
+@keyframes driftB {
+  to {
+    transform: translate3d(-16vmax, -8vmax, 0) scale(1.12);
+  }
+}
+@keyframes driftC {
+  to {
+    transform: translate3d(-10vmax, 12vmax, 0) scale(0.86);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .aurora {
+    opacity: 0.4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none;
+  }
+}

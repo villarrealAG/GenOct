@@ -1,0 +1,72 @@
+.dial {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 288px;
+  height: 288px;
+}
+
+.svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  overflow: visible;
+}
+
+.track,
+.progress {
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: var(--track);
+}
+
+.progress {
+  stroke: var(--accent);
+  filter: drop-shadow(0 0 10px color-mix(in oklab, var(--accent) 45%, transparent));
+  /* El timer baja de segundo en segundo; esta transición de 1s rellena
+     el hueco para que el anillo se vea avanzando sin brincos. */
+  transition:
+    stroke 0.8s var(--ease),
+    stroke-dashoffset 1s linear;
+}
+
+.readout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.time {
+  font-size: 68px;
+  font-weight: 250;
+  line-height: 1;
+  letter-spacing: -2.6px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.phase {
+  font-size: 12px;
+  font-weight: 620;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+@media (max-width: 420px) {
+  .dial {
+    width: 252px;
+    height: 252px;
+  }
+
+  .time {
+    font-size: 58px;
+  }
+}

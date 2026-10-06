@@ -1,0 +1,127 @@
+.task {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 18px;
+  transition: background 0.4s var(--ease);
+  animation: enter 0.5s var(--ease) both;
+}
+
+.task:hover {
+  background: var(--well);
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -8px, 0) scale(0.97);
+  }
+}
+
+.check {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid var(--track);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  transition:
+    background 0.4s var(--ease),
+    border-color 0.4s var(--ease),
+    transform 0.3s var(--ease);
+}
+
+.check:active {
+  transform: scale(0.88);
+}
+
+.check svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  /* El trazo se dibuja al completar en vez de aparecer de golpe. */
+  stroke-dasharray: 16;
+  stroke-dashoffset: 16;
+  transition: stroke-dashoffset 0.45s var(--ease);
+}
+
+.isDone .check {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.isDone .check svg {
+  stroke-dashoffset: 0;
+}
+
+.title {
+  flex: 1;
+  min-width: 0;
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--text);
+  overflow-wrap: anywhere;
+  transition:
+    color 0.4s var(--ease),
+    opacity 0.4s var(--ease);
+}
+
+.isDone .title {
+  color: var(--text-dim);
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+.remove {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    opacity 0.3s var(--ease),
+    color 0.3s var(--ease),
+    transform 0.3s var(--ease);
+}
+
+.remove svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.task:hover .remove,
+.remove:focus-visible {
+  opacity: 1;
+}
+
+.remove:hover {
+  color: var(--text);
+  transform: scale(1.12);
+}
+
+/* En táctil no hay hover: el botón se queda visible. */
+@media (hover: none) {
+  .remove {
+    opacity: 1;
+  }
+}

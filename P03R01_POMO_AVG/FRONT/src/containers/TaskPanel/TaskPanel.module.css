@@ -1,0 +1,30 @@
+.panel {
+  gap: 16px;
+  align-items: stretch;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.heading {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 620;
+  letter-spacing: -0.3px;
+  color: var(--text);
+}
+
+.count {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+}
+
+.clear {
+  align-self: flex-start;
+}

@@ -1,0 +1,39 @@
+/* Registrados como color para que el cambio de fase interpole en vez de saltar. */
+@property --accent {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #ff6b5a;
+}
+@property --accent-2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #ff9a62;
+}
+
+.stage {
+  position: relative;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 32px 24px;
+  isolation: isolate;
+  transition:
+    --accent 0.8s var(--ease),
+    --accent-2 0.8s var(--ease);
+}
+
+.stage[data-mode='focus'] {
+  --accent: #ff6b5a;
+  --accent-2: #ff9a62;
+}
+.stage[data-mode='short'] {
+  --accent: #30d158;
+  --accent-2: #5ee7a8;
+}
+
+.stack {
+  width: min(100%, 392px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}

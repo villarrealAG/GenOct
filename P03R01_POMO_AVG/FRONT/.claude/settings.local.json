@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(node -v)",
+      "PowerShell(npm -v)",
+      "PowerShell($old = @\\('src\\\\App.css','src\\\\styles\\\\controls.css','src\\\\components\\\\Panel.jsx','src\\\\components\\\\Panel.css','src\\\\components\\\\AuroraBackground.jsx','src\\\\components\\\\AuroraBackground.css','src\\\\components\\\\ModeSwitch.jsx','src\\\\components\\\\ModeSwitch.css','src\\\\components\\\\TimerDial.jsx','src\\\\components\\\\TimerDial.css','src\\\\components\\\\TimerControls.jsx','src\\\\components\\\\TimerControls.css','src\\\\components\\\\SessionGoal.jsx','src\\\\components\\\\SessionGoal.css','src\\\\components\\\\TimerCard.jsx','src\\\\components\\\\TimerCard.css','src\\\\components\\\\TaskPanel.jsx','src\\\\components\\\\TaskPanel.css','src\\\\components\\\\TaskForm.jsx','src\\\\components\\\\TaskForm.css','src\\\\components\\\\TaskItem.jsx','src\\\\components\\\\TaskItem.css'\\); foreach \\($f in $old\\) { if \\(Test-Path $f\\) { Remove-Item -Force $f } }; Get-ChildItem -Recurse -File src | ForEach-Object { $_.FullName.Replace\\(\\(Get-Location\\).Path + '\\\\',''\\) })",
+      "Bash(npx vite *)",
+      "Bash(node -e \"const R=require\\('react'\\); console.log\\('version:', R.version\\); console.log\\('hooks:', Object.keys\\(R\\).filter\\(k=>k.startsWith\\('use'\\)\\).join\\(', '\\)\\)\")"
+    ]
+  }
+}
